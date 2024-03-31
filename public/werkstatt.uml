@@ -1,0 +1,23 @@
+@startuml
+
+(Elektrisches Werkzeug) as EWERK
+(Manuelles Werkzeug) as MWERK
+(Schrauben & Co) as SCHR
+(Werkbank) as WERKB
+(Lacke & Farben) as LACKE
+(Ersatzteile) as ERSATZ
+(Fahrräder) as FAHRR
+(Fahrrad Sachen) as FSACHEN
+(Auto Sachen) as ASACHEN
+(Tischkreissäge) as TISCHK
+(Baumaterialien) as BAUMA
+
+EWERK - MWERK
+WERKB -- EWERK
+WERKB -- MWERK
+
+FAHRR - FSACHEN
+
+
+
+@enduml

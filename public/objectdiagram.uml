@@ -1,0 +1,67 @@
+@startuml
+
+class profile {
+    - id: number
+    - creationDate: Date
+    - changeDate: Date
+    + name: string
+    + names_optional: string[]
+    + description: string
+    + storytime_start: number
+    + storytime_end: number
+    + userID: number
+}
+class user {
+    - id: number
+    - creationDate: Date
+    + lastLoginDate: Date
+    + name: string
+    + email: string
+    + password: string
+}
+class story {
+    - id: number
+    + creationDate: Date
+    + changeDate: Date
+    + title: string
+    + userList: Array[]
+    + areaList: Array[]
+    + creatureList: Array[]
+}
+class creatureType {
+}
+class creature {
+    + objectList: Array[]
+    + creatureTypeID: number
+}
+class character {
+}
+class animal {
+}
+class area {
+    + areaList: Array[]
+    + creatureList: Array[]
+}
+class object {
+}
+
+
+profile --|> creature
+profile --|> area
+profile --|> object
+profile --|> creatureType
+
+creature --|> character
+creature --|> animal
+
+story -- creature
+story -- area
+story - user
+
+
+creature - object
+creature - area
+creature - creatureType
+
+
+@enduml

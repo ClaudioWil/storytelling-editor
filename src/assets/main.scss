@@ -1,0 +1,59 @@
+@import './base.scss';
+
+
+
+#app {
+  width:100%;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-template-rows: 64px auto;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar body";
+
+  #header{
+    grid-area: header;
+  }
+
+  #sidebar{
+    grid-area: sidebar;
+  }
+
+  #body{
+    grid-area: body;
+  }
+}
+#header{
+  box-sizing: border-box;
+  padding:1rem;
+  .header-wrapper{
+    height:100%;
+    min-width: 200px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 16px;    
+  }
+}
+
+#sidebar{
+  box-sizing: border-box;
+  padding:1rem;
+  .sidebar-wrapper{
+    min-height:200px;
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    border-radius: 16px;    
+  }
+}
+
+#body{
+  box-sizing: border-box;
+  padding:1rem;
+  .body-wrapper{
+    height:100%;
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    border-radius: 16px;    
+  }
+}
